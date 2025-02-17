@@ -14,9 +14,6 @@ jobs:
             - name: Checkout the code
               uses: actions/checkout@v2
 
-            - name: Node Js
-              uses: actions/setup-node@v1
-
             - name: executing remote ssh commands using password
               uses: appleboy/ssh-action@v1.2.0
               with:
@@ -27,8 +24,6 @@ jobs:
                 port: 22
                 script: |
                     whoami
-                    ls
-                    pwd
                     cd ci-practice-app
                     git pull
                     npm install
