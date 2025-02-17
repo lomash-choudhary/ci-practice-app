@@ -25,6 +25,7 @@ jobs:
                 script: |
                     whoami
                     ls
+                    pwd
                     cd ci-practice-app
                     git pull
                     export NVM_DIR=~/.nvm
