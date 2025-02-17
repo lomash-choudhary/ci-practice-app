@@ -1,0 +1,26 @@
+name: deploy NextjsFE to DO
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    deploy:
+        name: PUSH FE TO DO
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout the code
+              uses: actions/checkout@v2
+            
+            - name: executing remote ssh commands using password
+              uses: appleboy/ssh-action@v1.2.0
+              with:
+                host: 64.227.135.215
+                username: root
+                passphrase: ${{ secrets.PASSPHRASE }} 
+                key: ${{ secrets.SSHKEY }}
+                port: 22
+                script: whoami
+
