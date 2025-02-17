@@ -25,4 +25,7 @@ jobs:
                 script: |
                     whoami
                     ls
+                    cd ci-practice-app
+                    npm install
+                    npm run dev
 
