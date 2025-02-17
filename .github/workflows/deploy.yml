@@ -27,4 +27,6 @@ jobs:
                     cd ci-practice-app
                     git pull
                     npm install
+                    npm run build
+                    npm run start
 
