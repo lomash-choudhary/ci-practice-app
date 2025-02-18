@@ -27,6 +27,10 @@ jobs:
                     ls
                     pwd
                     cd ci-practice-app
+                    if [ ! -d "$ci-practice-app" ]; then
+                    echo "$ci-practice-ap does not exist."
+                    git clone https://github.com/lomash-choudhary/ci-practice-app.git
+                    fi
                     git pull
                     npm install
                     npm run build
