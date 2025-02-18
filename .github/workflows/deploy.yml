@@ -29,6 +29,8 @@ jobs:
                     cd ci-app/ci-practice-app
                     if [ ! -d "$ci-app" ]; then
                     echo "$ci-ap does not exist."
+                    mkdir ci-app
+                    cd ci-app
                     git init
                     git clone https://github.com/lomash-choudhary/ci-practice-app.git 
                     cd ci-practice-app
