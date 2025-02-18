@@ -26,10 +26,12 @@ jobs:
                     whoami
                     ls
                     pwd
+                    cd ci-app/ci-practice-app
+                    if [ ! -d "$ci-app" ]; then
+                    echo "$ci-ap does not exist."
+                    git init
+                    git clone https://github.com/lomash-choudhary/ci-practice-app.git 
                     cd ci-practice-app
-                    if [ ! -d "$ci-practice-app" ]; then
-                    echo "$ci-practice-ap does not exist."
-                    git clone https://github.com/lomash-choudhary/ci-practice-app.git
                     fi
                     git pull
                     npm install
