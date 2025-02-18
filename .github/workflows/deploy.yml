@@ -24,6 +24,8 @@ jobs:
                 port: 22
                 script: |
                     whoami
+                    ls
+                    pwd
                     cd ci-practice-app
                     git pull
                     npm install
